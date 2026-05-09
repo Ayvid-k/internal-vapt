@@ -87,8 +87,9 @@ The assessment focused on:
 
 ## LinPEAS Analysis
 ![LinPEAS](screenshots/kernal-version.png)
-![LinPEAS](screenshots/SUId-binaries.png)
+![LinPEAS](screenshots/SUID-binaries.png)
 ![LinPEAS](screenshots/file-permission.png)
+![LinPEAS](screenshots/passwd-files.png)
 
 ## Privilege Escalation Research
 ![Privilege Escalation](screenshots/searchsploit-result.png)
