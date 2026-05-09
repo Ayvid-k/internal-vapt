@@ -82,6 +82,17 @@ The assessment focused on:
 ### SMB Enumeration
 ![SMB](screenshots/smb-enumeration.png)
 
+## Initial Access
+![Exploit](screenshots/exploit-success.png)
+
+## LinPEAS Analysis
+![LinPEAS](screenshots/kernal-version.png)
+![LinPEAS](screenshots/SUId-binaries.png)
+![LinPEAS](screenshots/file-permission.png)
+
+## Privilege Escalation Research
+![Privilege Escalation](screenshots/searchsploit-result.png)
+
 ### Privilege Escalation
 ![Root Shell](screenshots/root-shell.png)
 
