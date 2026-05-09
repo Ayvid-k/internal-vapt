@@ -1,3 +1,15 @@
+# Nmap Scan Results
+
+## Command Used
+
+```bash
+nmap -sV -sC -Pn 192.168.56.101
+```
+
+---
+
+# Scan Output
+```text
 # Nmap 7.98 scan initiated Tue Mar 31 01:31:54 2026 as: /usr/lib/nmap/nmap --privileged -p- -T4 -A -oA nmap-internal 192.168.56.102
 Nmap scan report for 192.168.56.102
 Host is up (0.0018s latency).
@@ -130,3 +142,4 @@ HOP RTT     ADDRESS
 
 OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
 # Nmap done at Tue Mar 31 01:34:24 2026 -- 1 IP address (1 host up) scanned in 149.58 seconds
+```
