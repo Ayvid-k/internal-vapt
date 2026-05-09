@@ -105,6 +105,11 @@ smbclient -L //192.168.56.102 -N
 ```bash
 smbmap -H 192.168.56.102
 ```
+OR use 
+```bash
+nxc smb <TARGET-IP> -u <USER> -p '<PASSWORD>' --shares
+```
+Note: NetExec (nxc) is currently more reliable than smbmap on newer Kali/Python builds.
 
 ### Findings
 
@@ -171,18 +176,63 @@ DirBuster
 High
 
 ## Description
+During service enumeration, the FTP server was identified as allowing anonymous authentication without requiring valid user credentials.
 
-The FTP service allowed anonymous authentication without valid credentials.
+Anonymous FTP access enables unauthenticated users to interact with the FTP service and potentially access sensitive files stored on the server.
 
-## Impact
+The service was identified running on:
 
-An attacker may access sensitive files or upload malicious content.
+| Port | Service | Version |
+|---|---|---|
+| 21 | FTP | vsftpd 2.3.4 |
+
+## Enumeration Process
+
+### Nmap Service Detection
+
+Command used:
+
+```bash
+nmap -sV -p 21 192.168.56.102
+```
+
+Result identified:
+- FTP service enabled
+- vsftpd 2.3.4 running
+- Service Info: OS: Unix
+
+## Verification
+Anonymous authentication was successfully validated using the FTP client.
+
+```bash
+ftp 192.168.56.102
+```
+Login attempt:
+
+```bash
+Name: anonymous
+Password: anonymous
+```
+Authentication succeeded without valid credentials.
 
 ## Evidence
 
+### Successful Anonymous Login
+
 ```bash
-ftp 192.168.56.101
+Connected to 192.168.56.102.
+220 (vsFTPd 2.3.4)
+Name (192.168.56.102:kali): anonymous
+331 Please specify the password.
+Password: 
+230 Login successful.
+Remote system type is UNIX.
+Using binary mode to transfer files.
+ftp> 
 ```
+## Impact
+
+An attacker may access sensitive files or upload malicious content.
 
 ## Recommendation
 
@@ -209,6 +259,8 @@ Unauthorized users may access internal files and shared resources.
 
 ```bash
 smbclient -L //192.168.56.101 -N
+
+nxc smb <TARGET-IP> -u <USER> -p '<PASSWORD>' --shares
 ```
 
 ## Recommendation
