@@ -18,7 +18,7 @@ The objective was to identify:
 | Field | Details |
 |---|---|
 | Target Machine | Metasploitable2 |
-| Target IP | 192.168.56.10_ |
+| Target IP | 192.168.x.x |
 | Attacker Machine | Kali Linux |
 | Assessment Type | Internal Network Pentest |
 | Scope | Single Host Assessment |
@@ -63,7 +63,7 @@ The following phases were performed during the assessment:
 ### Command Used
 
 ```bash
-nmap -p- -T4 -A 192.168.56.10_
+nmap -p- -T4 -A 192.168.x.x
 ```
 
 ### Key Findings
@@ -87,7 +87,7 @@ nmap -p- -T4 -A 192.168.56.10_
 ### Command Used
 
 ```bash
-smbclient -L //192.168.56.10_ -N
+smbclient -L //192.168.x.x -N
 ```
 
 ### Findings
@@ -103,7 +103,7 @@ smbclient -L //192.168.56.10_ -N
 ### Command Used
 
 ```bash
-smbmap -H 192.168.56.10_
+smbmap -H 192.168.x.x
 ```
 OR use 
 ```bash
@@ -123,7 +123,7 @@ Note: NetExec (nxc) is currently more reliable than smbmap on newer Kali/Python 
 ### Command Used
 
 ```bash
-crackmapexec smb 192.168.56.10_
+crackmapexec smb 192.168.x.x
 ```
 
 ### Findings
@@ -141,7 +141,7 @@ crackmapexec smb 192.168.56.10_
 ### Command Used
 
 ```bash
-nikto -h http://192.168.56.10_
+nikto -h http://192.168.x.x
 ```
 
 ### Findings
@@ -193,7 +193,7 @@ The service was identified running on:
 Command used:
 
 ```bash
-nmap -sV -p 21 192.168.56.10_
+nmap -sV -p 21 192.168.x.x
 ```
 
 Result identified:
@@ -205,7 +205,7 @@ Result identified:
 Anonymous authentication was successfully validated using the FTP client.
 
 ```bash
-ftp 192.168.56.10_
+ftp 192.168.x.x
 ```
 Login attempt:
 
@@ -220,9 +220,9 @@ Authentication succeeded without valid credentials.
 ### Successful Anonymous Login
 
 ```bash
-Connected to 192.168.56.10_.
+Connected to 192.168.x.x.
 220 (vsFTPd 2.3.4)
-Name (192.168.56.10_:kali): anonymous
+Name (192.168.x.x:kali): anonymous
 331 Please specify the password.
 Password: 
 230 Login successful.
@@ -258,7 +258,7 @@ Unauthorized users may access internal files and shared resources.
 ## Evidence
 
 ```bash
-smbclient -L //192.168.56.10_ -N
+smbclient -L //192.168.x.x -N
 
 nxc smb <TARGET-IP> -u <USER> -p '<PASSWORD>' --shares
 ```
