@@ -113,8 +113,8 @@ PORT      STATE SERVICE     VERSION
 56869/tcp open  mountd      1-3 (RPC #100005)
 MAC Address: 08:00:27:97:28:F8 (Oracle VirtualBox virtual NIC)
 Device type: general purpose
-Running: Linux 2.6.X
-OS CPE: cpe:/o:linux:linux_kernel:2.6
+Running: Linux 2.x.X
+OS CPE: cpe:/o:linux:linux_kernel:2.x
 OS details: Linux 2.6.9 - 2.6.33
 Network Distance: 1 hop
 Service Info: Hosts:  metasploitable.localdomain, irc.Metasploitable.LAN; OSs: Unix, Linux; CPE: cpe:/o:linux:linux_kernel
