@@ -3,15 +3,15 @@
 ## Command Used
 
 ```bash
-nmap -p- -T4 -A  192.168.56.102
+nmap -p- -T4 -A  192.168.X.X
 ```
 
 ---
 
 # Scan Output
 ```text
-# Nmap 7.98 scan initiated Tue Mar 31 01:31:54 2026 as: /usr/lib/nmap/nmap --privileged -p- -T4 -A -oA nmap-internal 192.168.56.102
-Nmap scan report for 192.168.56.102
+# Nmap 7.98 scan initiated Tue Mar 31 01:31:54 2026 as: /usr/lib/nmap/nmap --privileged -p- -T4 -A -oA nmap-internal 192.168.x.x
+Nmap scan report for 192.168.x.x
 Host is up (0.0018s latency).
 Not shown: 65505 closed tcp ports (reset)
 PORT      STATE SERVICE     VERSION
@@ -19,7 +19,7 @@ PORT      STATE SERVICE     VERSION
 | ftp-syst: 
 |   STAT: 
 | FTP server status:
-|      Connected to 192.168.56.109
+|      Connected to 192.168.x.x
 |      Logged in as ftp
 |      TYPE: ASCII
 |      No session bandwidth limit
@@ -138,7 +138,7 @@ Host script results:
 
 TRACEROUTE
 HOP RTT     ADDRESS
-1   1.78 ms 192.168.56.102
+1   1.78 ms 192.168.x.x
 
 OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
 # Nmap done at Tue Mar 31 01:34:24 2026 -- 1 IP address (1 host up) scanned in 149.58 seconds
