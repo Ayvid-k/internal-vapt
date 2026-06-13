@@ -77,7 +77,10 @@ The assessment focused on:
 ## Screenshots
 
 ### Nmap Scan
-![Nmap](screenshots/nmap-results.png)
+![Nmap](screenshots/nmap-scan.png)
+
+### Nikto Scan
+![Nikto](screenshots/nikto-web-scan.png)
 
 ### SMB Enumeration
 ![SMB](screenshots/smb-enumeration.png)
