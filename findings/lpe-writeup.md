@@ -200,9 +200,6 @@ Multiple public privilege escalation references affecting the identified kernel 
 
 This confirmed that the outdated kernel significantly increased the risk of local privilege escalation.
 
-### Exploit Research
-![SearchSploit](screenshots/searchsploit-result.png)
-
 ---
 # Root Access Verification
 
