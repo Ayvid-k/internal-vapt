@@ -13,7 +13,7 @@ The objective was to escalate privileges from a low-privileged user account to r
 | Field | Details |
 |---|---|
 | Target Machine | Metasploitable2 |
-| Target IP | 192.168.56.102 |
+| Target IP | 192.168.x.x |
 | Operating System | Linux |
 | Assessment Type | Internal Pentest |
 | Service | Telnet |
@@ -108,7 +108,7 @@ uname -a
 ### Output
 
 ```bash
-Linux metasploitable 2.6.24-16-server #1 SMP Thu Apr 10 13:58:00 UTC 2008 i686 GNU/Linux
+Linux metasploitable 2.x.x-16-server #1 SMP Thu Apr 10 13:58:00 UTC 2008 i686 GNU/Linux
 ```
 
 The kernel version was identified as outdated and potentially vulnerable to known local privilege escalation exploits.
@@ -138,7 +138,7 @@ LinPEAS identified multiple potential privilege escalation vectors including:
 
 - Outdated Linux kernel
   ```bash
-  Linux version 2.6.24-16-server (buildd@palmer) (gcc version 4.2.3 (Ubuntu 4.2.3-2ubuntu7)) #1 SMP Thu Apr 10 13:58:00 UTC 2008                                                                                                             
+  Linux version 2.x.x-16-server (buildd@palmer) (gcc version 4.2.3 (Ubuntu 4.2.3-2ubuntu7)) #1 SMP Thu Apr 10 13:58:00 UTC 2008                                                                                                             
   ```
 - Misconfigured SUID binaries
  
@@ -191,7 +191,7 @@ find / -writable -type d 2>/dev/null
 ### Command Used
 
 ```bash
-searchsploit linux kernel 2.6 privilege escalation
+searchsploit linux kernel 2.x privilege escalation
 ```
 ---
 ### Observation
