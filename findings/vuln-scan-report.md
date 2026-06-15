@@ -131,7 +131,7 @@ crackmapexec smb 192.168.x.x
 - SMB signing disabled
 - Legacy SMB configuration detected
 - Weak authentication controls identified
-- ![SMB](screenshots/crackmapexec.png)
+! [SMB](screenshots/crackmapexec.png)
 ---
 
 # Web Enumeration
