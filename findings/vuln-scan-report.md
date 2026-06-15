@@ -318,6 +318,7 @@ Nikto identified insecure web server configurations and exposed resources.
 Information disclosure may assist attackers during reconnaissance.
 
 ### Evidence
+<img width="1347" height="579" alt="image" src="https://github.com/user-attachments/assets/01d4f87d-1f61-4a99-9b43-cd3020f6b73f" />
 
 
 ## Recommendation
