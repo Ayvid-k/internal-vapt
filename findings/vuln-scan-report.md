@@ -131,7 +131,8 @@ crackmapexec smb 192.168.x.x
 - SMB signing disabled
 - Legacy SMB configuration detected
 - Weak authentication controls identified
-! [SMB](screenshots/crackmapexec.png)
+<img width="852" height="35" alt="image" src="https://github.com/user-attachments/assets/fe59074e-4444-4e96-be30-7d33ace93cf5" />
+
 ---
 
 # Web Enumeration
@@ -263,10 +264,10 @@ nxc smb <TARGET-IP> -u <USER> -p '<PASSWORD>' --shares
 ```
 ## Evidence
   #### smblient:
-**![SMB](screenshots/smb-client.png)**
+  ![SMB](screenshots/smbclient.png)
 
   #### smbmap:
-**![SMB](screenshots/smbmap.png)**
+  ![SMB](screenshots/smbmap.png)
   
 ## Recommendation
 
