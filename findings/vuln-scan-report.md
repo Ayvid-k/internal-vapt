@@ -264,10 +264,10 @@ nxc smb <TARGET-IP> -u <USER> -p '<PASSWORD>' --shares
 ```
 ## Evidence
   #### smblient:
-  ![SMB](screenshots/smbclient.png)
+ <img width="761" height="300" alt="image" src="https://github.com/user-attachments/assets/b865966a-ec3d-4d24-986b-3cd5ae7414b5" />
 
   #### smbmap:
-  ![SMB](screenshots/smbmap.png)
+  
   
 ## Recommendation
 
