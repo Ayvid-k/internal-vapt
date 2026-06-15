@@ -131,7 +131,7 @@ crackmapexec smb 192.168.x.x
 - SMB signing disabled
 - Legacy SMB configuration detected
 - Weak authentication controls identified
-
+- ![SMB](screenshots/crackmapexec.png)
 ---
 
 # Web Enumeration
@@ -150,7 +150,6 @@ nikto -h http://192.168.x.x
 - Apache version outdated
 - Default files and directories exposed
 - Missing security headers detected
-
 ---
 
 ## Directory Bruteforcing
@@ -255,14 +254,20 @@ SMB shares were accessible without authentication.
 
 Unauthorized users may access internal files and shared resources.
 
-## Evidence
+## Command used
 
 ```bash
 smbclient -L //192.168.x.x -N
 
 nxc smb <TARGET-IP> -u <USER> -p '<PASSWORD>' --shares
 ```
+## Evidence
+  #### smblient:
+**![SMB](screenshots/smb-client.png)**
 
+  #### smbmap:
+**![SMB](screenshots/smbmap.png)**
+  
 ## Recommendation
 
 - Disable anonymous SMB access
@@ -310,6 +315,8 @@ Nikto identified insecure web server configurations and exposed resources.
 ## Impact
 
 Information disclosure may assist attackers during reconnaissance.
+# Evidence
+**![WEB](screenshots/web-scan-nikto.png)**
 
 ## Recommendation
 
